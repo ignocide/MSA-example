@@ -1,15 +1,12 @@
-package ignocide.msa.auth;
-
+package ignocide.msa.gateway;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
-@EnableEurekaClient
-public class AuthApplication {
-
+@EnableEurekaServer
+public class DiscoveryApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AuthApplication.class, args);
+        SpringApplication.run(DiscoveryApplication.class, args);
     }
 }
