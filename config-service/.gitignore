@@ -20,3 +20,4 @@ log/*
 *.iml
 *.ipr
 
+./src/main/resources/config

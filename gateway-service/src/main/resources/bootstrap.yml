@@ -5,6 +5,12 @@ server:
 spring:
   application:
     name: gateway-service
+  cloud:
+    config:
+      uri: ${CONFIG_SERVICE_URI:http://127.0.0.1:8888}
+      username: config_user
+      password: config_password
+      name: ureka
 
 zuul:
   routes:
@@ -15,12 +21,3 @@ zuul:
       path: /uaa/**
       serviceId: auth-service
   sensitive-headers: Cookie, Set-Cookie
-
-eureka:
-  client:
-    initialInstanceInfoReplicationIntervalSeconds: 2
-    service-url:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    registryFetchIntervalSeconds: 2
-    leaseRenewalIntervalInSeconds: 2

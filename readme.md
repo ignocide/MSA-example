@@ -1,3 +1,7 @@
+## before exec in local with docker
+
+* config-service must be started, before other services start up
+
 # Micro Service Architecture Example
 
 spring boot zuul을 이용한 마이크로 서비스 아키텍쳐  

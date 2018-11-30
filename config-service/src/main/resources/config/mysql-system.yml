@@ -1,0 +1,22 @@
+---
+spring:
+  profiles: local_docker
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://${MYSQL_HOST:mysql}:3306/system?useSSL=false
+    username: root
+    password: password
+    tomcat:
+      max-active: 4
+      max-idle: 2
+---
+spring:
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/system?useSSL=false
+    username: root
+    password: password
+    tomcat:
+      max-active: 4
+      max-idle: 2
